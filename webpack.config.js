@@ -12,7 +12,12 @@ module.exports = {
 		rules: [
 			{
 				test: /\.tsx?$/,
-				use: ['babel-loader', 'stylelint-custom-processor-loader'],
+				use: ['babel-loader'],
+				exclude: /node_modules/,
+			},
+			{
+				test: /\.css$/,
+				use: ['stylelint-custom-processor-loader'],
 				exclude: /node_modules/,
 			},
 		],
@@ -30,7 +35,9 @@ module.exports = {
 	context: __dirname,
 	target: 'web',
 	devServer: {
-		contentBase: path.join(__dirname, 'dist'),
+		static: {
+			directory: path.join(__dirname, 'dist'),
+		},
 		compress: true,
 		port: 3000,
 		hot: true,
