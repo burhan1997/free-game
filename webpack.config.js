@@ -7,6 +7,7 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: '[name].[contenthash].bundle.js',
+		assetModuleFilename: 'assets/[name][hash][ext]',
 	},
 	module: {
 		rules: [
@@ -19,6 +20,10 @@ module.exports = {
 				test: /\.css$/,
 				use: ['stylelint-custom-processor-loader'],
 				exclude: /node_modules/,
+			},
+			{
+				test: /\.svg/,
+				type: 'asset/resource',
 			},
 		],
 	},
