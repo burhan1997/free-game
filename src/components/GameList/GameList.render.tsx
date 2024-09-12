@@ -5,7 +5,7 @@ import { Game } from 'types'
 import { List, ListItem } from './styles'
 
 interface Props {
-	err: string
+	err: string | undefined
 	games: Game[]
 	onFilterChange: (e: ChangeEvent<HTMLFormElement>) => void
 }

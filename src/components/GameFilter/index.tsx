@@ -33,6 +33,7 @@ const GameFilter = ({ onChange }: Props): ReactElement => (
 		<Label htmlFor="tag-select">
 			Tag:
 			<Select name="tag" id="tag-select">
+				<option value="">All Tags</option>
 				{TAGS.map(tag => (
 					<option key={tag.value} value={tag.value}>
 						{tag.display}

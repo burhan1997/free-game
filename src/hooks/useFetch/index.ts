@@ -9,9 +9,10 @@ type Response = {
 	error?: string
 }
 
-const useFetch = (params: Filter) => {
+const useFetch = (params: Filter): Response => {
 	const [games, setGames] = useState<Game[]>([])
 	const [err, setErr] = useState<string>('')
+
 	const { platform, genre, tag, sortBy } = params
 
 	useEffect(() => {

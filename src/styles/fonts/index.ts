@@ -1,1 +1,1 @@
-export const fontFamily = 'Arial, Verdana'
+export const fontFamily = 'Lato, Arial, sans-serif'

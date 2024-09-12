@@ -1,6 +1,12 @@
 import styled from 'styled-components'
 import { breakpoints } from 'styles/breakpoints'
-import { backgroundColor, secondaryTextColor } from 'styles/theme'
+import { fontFamily } from 'styles/fonts'
+import {
+	primaryColor,
+	primaryTextColor,
+	secondaryColor,
+	secondaryTextColor,
+} from 'styles/theme'
 
 export const Form = styled.form`
 	display: flex;
@@ -32,6 +38,10 @@ export const Label = styled.label`
 export const Select = styled.select`
 	width: 100%;
 	margin-top: 0;
-	color: white;
-	background-color: ${backgroundColor};
+	color: ${primaryTextColor};
+	background-color: ${secondaryColor};
+	border: 1px solid ${primaryColor};
+	border-radius: 4px;
+	padding: 8px 12px;
+	font-family: ${fontFamily};
 `
